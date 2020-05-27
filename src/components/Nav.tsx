@@ -22,10 +22,6 @@ const NavWrapper = styled.nav`
         align-items: center;
         padding: 8px;
         
-        .icon{
-          width: 24px;     
-          height: 24px;   
-        }
         &.selected {
           color: #0092ff;
           .icon {

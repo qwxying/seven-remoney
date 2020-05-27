@@ -23,3 +23,16 @@ body {
   font-size: 14px;
   line-height: 1.2;
 }
+
+button {
+  border: 0;
+  font-size: 14px;
+  background-color: transparent;
+  outline: none;
+  font-family: $font-hei;
+}
+
+.icon{
+  width: 24px;
+  height: 24px;
+}
