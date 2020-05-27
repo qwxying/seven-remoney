@@ -10,6 +10,7 @@ import Details from './views/Details';
 import Users from './views/Users';
 import Statistics from './views/Statistics';
 import NoMatch from './views/NoMatch';
+import NoteDown from './views/NoteDownView';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Redirect exact from="/" to="home"/>
         <Route path="/home">
           <Home/>
+        </Route>
+        <Route path="/notedown">
+          <NoteDown/>
         </Route>
         <Route path="/details">
           <Details/>

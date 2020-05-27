@@ -4,9 +4,12 @@ import React from 'react';
 
 function Statistics() {
   return (
-    <Layout>
-      <h2>统计页面</h2>
-    </Layout>
+    <Wrapper>
+      <Layout>
+        <h2>统计页面</h2>
+      </Layout>
+      <Nav/>
+    </Wrapper>
   );
 }
 

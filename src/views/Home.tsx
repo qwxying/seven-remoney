@@ -2,6 +2,13 @@ import Layout from '../components/Layout';
 import React from 'react';
 import styled from 'styled-components';
 import Icon from '../components/Icon';
+import Nav from '../components/Nav';
+import {NavLink} from 'react-router-dom';
+const Wrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
 
 const Title = styled.section`
   text-align: center;
@@ -14,24 +21,24 @@ const Overview = styled.section`
   background:#0092ff;
   color: #fff;
   padding: 24px;
-  > ol > :nth-child(2){
-  display: flex;
+  > ol > :nth-child(1){
+    display: flex;
+    flex-direction: column;
   }
 `;
 
-const Expense = styled.li`
+const Expense = styled.span`
   font-size: 36px;
   padding: 24px 0;
-
 `;
-const Income = styled.li`
+const Income = styled.span`
 
 `;
 const NoteDown = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  > button {
+  button {
     background:#0092ff;
     height: 36px;
     width: 75vw;
@@ -58,58 +65,64 @@ const Recent = styled.section`
 
 function Home() {
   return (
-    <Layout>
-      <Title>小七记账</Title>
-      <Overview>
-        <ol>
-          <li><span>本月支出（元）</span><Expense>￥500.00</Expense></li>
-          <li><span>本月收入</span><Income>￥6868.00</Income></li>
-        </ol>
-      </Overview>
-      <NoteDown>
-        <button>记一笔</button>
-      </NoteDown>
-      <Recent>
-        <ol>
-          <li>
-            <div><Icon name="salary"/><span>工资</span></div>
-            <span>￥+6868.00</span></li>
-          <li>
-            <div><Icon name="food"/><span>餐饮</span></div>
-            <span>￥-100.00</span></li>
-          <li>
-            <div><Icon name="traffic"/><span>交通</span></div>
-            <span>￥-120.00</span></li>
-          <li>
-            <div><Icon name="redEnvelope"/><span>红包</span></div>
-            <span>￥-280.00</span></li>
-          <li>
-            <div><Icon name="salary"/><span>工资</span></div>
-            <span>￥+6868.00</span></li>
-          <li>
-            <div><Icon name="food"/><span>餐饮</span></div>
-            <span>￥-100.00</span></li>
-          <li>
-            <div><Icon name="traffic"/><span>交通</span></div>
-            <span>￥-120.00</span></li>
-          <li>
-            <div><Icon name="redEnvelope"/><span>红包</span></div>
-            <span>￥-280.00</span></li>
-          <li>
-            <div><Icon name="salary"/><span>工资</span></div>
-            <span>￥+6868.00</span></li>
-          <li>
-            <div><Icon name="food"/><span>餐饮</span></div>
-            <span>￥-100.00</span></li>
-          <li>
-            <div><Icon name="traffic"/><span>交通</span></div>
-            <span>￥-120.00</span></li>
-          <li>
-            <div><Icon name="redEnvelope"/><span>红包</span></div>
-            <span>￥-280.00</span></li>
-        </ol>
-      </Recent>
-    </Layout>
+    <Wrapper>
+      <Layout>
+        <Title>小七记账</Title>
+        <Overview>
+          <ol>
+            <li><span>本月支出（元）</span><Expense>￥500.00</Expense></li>
+            <li><span>本月收入</span><Income>￥6868.00</Income></li>
+          </ol>
+        </Overview>
+        <NoteDown>
+          <NavLink to="/notedown">
+            <button>记一笔</button>
+          </NavLink>
+        </NoteDown>
+        <Recent>
+          <ol>
+            <li>
+              <div><Icon name="salary"/><span>工资</span></div>
+              <span>￥+6868.00</span></li>
+            <li>
+              <div><Icon name="food"/><span>餐饮</span></div>
+              <span>￥-100.00</span></li>
+            <li>
+              <div><Icon name="traffic"/><span>交通</span></div>
+              <span>￥-120.00</span></li>
+            <li>
+              <div><Icon name="redEnvelope"/><span>红包</span></div>
+              <span>￥-280.00</span></li>
+            <li>
+              <div><Icon name="salary"/><span>工资</span></div>
+              <span>￥+6868.00</span></li>
+            <li>
+              <div><Icon name="food"/><span>餐饮</span></div>
+              <span>￥-100.00</span></li>
+            <li>
+              <div><Icon name="traffic"/><span>交通</span></div>
+              <span>￥-120.00</span></li>
+            <li>
+              <div><Icon name="redEnvelope"/><span>红包</span></div>
+              <span>￥-280.00</span></li>
+            <li>
+              <div><Icon name="salary"/><span>工资</span></div>
+              <span>￥+6868.00</span></li>
+            <li>
+              <div><Icon name="food"/><span>餐饮</span></div>
+              <span>￥-100.00</span></li>
+            <li>
+              <div><Icon name="traffic"/><span>交通</span></div>
+              <span>￥-120.00</span></li>
+            <li>
+              <div><Icon name="redEnvelope"/><span>红包</span></div>
+              <span>￥-280.00</span></li>
+          </ol>
+        </Recent>
+      </Layout>
+      <Nav/>
+    </Wrapper>
+
   );
 }
 

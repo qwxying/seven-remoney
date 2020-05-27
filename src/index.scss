@@ -13,6 +13,14 @@ ul, ol {
   list-style: none;
 }
 
+li {
+  display: inline-block;
+}
+
+input {
+  border: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -25,14 +33,14 @@ body {
 }
 
 button {
-  border: 0;
+  border: none;
   font-size: 14px;
   background-color: transparent;
   outline: none;
   font-family: $font-hei;
 }
 
-.icon{
+.icon {
   width: 24px;
   height: 24px;
 }
