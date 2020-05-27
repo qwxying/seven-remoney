@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import React from 'react';
+import Icon from './Icon';
 
-require('icons/home.svg');
-require('icons/details.svg');
-require('icons/statistics.svg');
-require('icons/users.svg');
+
 
 
 const NavWrapper = styled.nav`
@@ -14,7 +12,6 @@ const NavWrapper = styled.nav`
   > ul {
     display: flex;
     align-items: center;
-    //height: 72px;
     > li {
       display: flex;
       flex-direction: column;
@@ -36,27 +33,19 @@ const Nav = () => {
     <NavWrapper>
       <ul>
         <li>
-          <svg className='icon'>
-            <use xlinkHref="#home"/>
-          </svg>
+          <Icon name="home"/>
           <Link to="/home">首页</Link>
         </li>
         <li>
-          <svg className='icon'>
-            <use xlinkHref="#details"/>
-          </svg>
+          <Icon name="details"/>
           <Link to="/details">明细</Link>
         </li>
         <li>
-          <svg className='icon'>
-            <use xlinkHref="#statistics"/>
-          </svg>
+          <Icon name="statistics"/>
           <Link to="/statistics">统计</Link>
         </li>
         <li>
-          <svg className='icon'>
-            <use xlinkHref="#users"/>
-          </svg>
+          <Icon name="users"/>
           <Link to="/users">我的</Link>
         </li>
       </ul>
