@@ -7,6 +7,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import styled from 'styled-components';
+import Nav from './components/Nav';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -17,20 +18,6 @@ const Wrapper = styled.div`
 const Main = styled.div`
   flex-grow: 1;
   overflow: auto;
-`;
-
-const Nav = styled.nav`
-  border: 1px solid red;
-  > ul {
-    display: flex;
-    align-items: center;
-    height: 72px;
-    > li {
-      width: 25%;
-      text-align: center;
-      
-    }
-  }
 `;
 
 function App() {
@@ -57,22 +44,7 @@ function App() {
             </Route>
           </Switch>
         </Main>
-        <Nav>
-          <ul>
-            <li>
-              <Link to="/home">首页</Link>
-            </li>
-            <li>
-              <Link to="/details">明细</Link>
-            </li>
-            <li>
-              <Link to="/statistics">统计</Link>
-            </li>
-            <li>
-              <Link to="/users">我的</Link>
-            </li>
-          </ul>
-        </Nav>
+        <Nav/>
       </Wrapper>
     </Router>
   );
