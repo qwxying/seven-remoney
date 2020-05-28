@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Icon from '../components/Icon';
 import Nav from '../components/Nav';
 import {NavLink} from 'react-router-dom';
+
 const Wrapper = styled.div`
   height: 100vh;
   display: flex;
@@ -26,7 +27,6 @@ const Overview = styled.section`
     flex-direction: column;
   }
 `;
-
 const Expense = styled.span`
   font-size: 36px;
   padding: 24px 0;
@@ -122,7 +122,6 @@ function Home() {
       </Layout>
       <Nav/>
     </Wrapper>
-
   );
 }
 
