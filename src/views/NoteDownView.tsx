@@ -25,11 +25,10 @@ const Category = styled.section`
   }
 `;
 const Tab = styled.ul`
-  
-  
   font-size: 16px;
   display: flex;
   > li {
+    white-space: nowrap;  
     :first-child{
       border-radius: 8px 0 0 8px;
     }
@@ -49,8 +48,15 @@ const Tab = styled.ul`
 const Output = styled.section`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 16px;
   font-size: 16px;
+  box-shadow: inset 0 -4px 4px -4px rgba(0,0,0,0.25),
+              inset 0 4px 4px -4px rgba(0,0,0,0.25);
+  .bill {
+    font-size: 24px;
+    color: #ec575d;
+  }
 `;
 
 const Tags = styled.section`
@@ -152,7 +158,7 @@ function NoteDown() {
             <NavLink to="/"> </NavLink>
           </Category>
           <Output>
-            <span>账单金额</span><span>￥0.00</span>
+            <span>账单金额</span><span className="bill">￥0.00</span>
           </Output>
           <Tags>
             <ul>
