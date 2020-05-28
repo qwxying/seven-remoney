@@ -19,22 +19,30 @@ const Category = styled.section`
   justify-content: space-between;
   align-items: center;
   > a {
-    padding: 15px 9px;
+    text-align: center;
+    padding: 16px 0;
     width: 48px;
   }
 `;
-const Tab = styled.div`
-  border: 1px solid #2a3040;
-  border-radius: 8px;
-  padding: 4px;
+const Tab = styled.ul`
+  
+  
   font-size: 16px;
-  a{
-    padding: 3px 24px;
-    
-      font-size: 16px;
-      &.selected{
-        background:#000;
-      
+  display: flex;
+  > li {
+    :first-child{
+      border-radius: 8px 0 0 8px;
+    }
+    :nth-child(2){
+      border-radius: 0 8px 8px 0;
+    }
+    border: 1px solid #2a3040;
+    width: 50%;
+    text-align: center;
+    padding: 4px 32px;
+    &.selected {
+      background:#2a3040;
+      color: #fff;
     }
   }
 `;
@@ -63,7 +71,7 @@ const Tags = styled.section`
 `;
 const Remarks = styled.section`
   display: flex;
-  line-height: 2;
+  line-height: 2.3;
   align-items: center;
   div{
     border-left: 1px solid #767676;
@@ -71,8 +79,8 @@ const Remarks = styled.section`
   }
   input {
     flex-grow: 1;
-    padding: 0 8px;
     margin: 0 16px;
+    height: 32px;
   }
 
 `;
@@ -138,8 +146,8 @@ function NoteDown() {
           <Category>
             <NavLink to="/">返回</NavLink>
             <Tab>
-              <NavLink to="#">支出</NavLink>
-              <NavLink to="#">收入</NavLink>
+              <li className="selected">支出</li>
+              <li>收入</li>
             </Tab>
             <NavLink to="/"> </NavLink>
           </Category>
@@ -180,7 +188,7 @@ function NoteDown() {
             <BillingDate>今天</BillingDate>
             <div>
             </div>
-            <input type="" placeholder="请输入备注信息"/>
+            <input placeholder="请输入备注信息"/>
           </Remarks>
         </Layout>
       </LayoutWrapper>
